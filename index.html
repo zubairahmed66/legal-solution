@@ -8,17 +8,22 @@
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
 
+    <!-- font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
     <!-- Style -->
     <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css?utm_source=chatgpt.com">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
-<body>
+<body class="font-['Poppins',sans-serif]">
     <!-- Header Are Start -->
-    <div id="za-header-area">
-        <div class="za-container">
-            <div class="za-row">
+    <div id="za-header-area" class="py-11.5 sticky top-0 left-0 w-full z-30 transition-all duration-300 bg-amber-200">
+        <div class="za-container max-w-292.5 mx-auto">
+            <div class="za-row flex items-center justify-between h-16 transition-all duration-300">
 
                 <!-- Logo -->
                 <a href="index.html">
@@ -26,15 +31,16 @@
                 </a>
 
                 <!-- Navigation -->
-                <nav class="za-header-nav">
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li>
-                            <a href="#">
+                <nav class="za-header-nav hidden md:block">
+                    <ul class="flex items-center space-x-7 font-normal text-[#707070]">
+                        <li><a href="#" class="hover:text-indigo-600 transition">Home</a></li>
+                        <li class="relative group">
+                            <a href="#" class="flex items-center justify-between gap-1.5 hover:text-indigo-600 transition">
                                 Services
                                 <i class="fa-solid fa-angle-down"></i>
                             </a>
-                            <ul>
+                            <ul class="md:invisible md:opacity-0 md:translate-y-2 group-hover:visible">
+                                <!-- এই পর্যন্ত শেষ করছি -->
                                 <li><a href="#">Business Law</a></li>
                                 <li><a href="#">Criminal Law</a></li>
                                 <li>
@@ -54,7 +60,7 @@
                                 Cases
                                 <i class="fa-solid fa-angle-down"></i>
                             </a>
-                            <ul>
+                            <ul class="hidden">
                                 <li><a href="#">Criminal Cases</a></li>
                                 <li><a href="#">Civil Cases</a></li>
                                 <li><a href="#">Case Studies</a></li>
@@ -64,10 +70,29 @@
                         <li><a href="#">Contact Us</a></li>
                     </ul>
                 </nav>
+
+                <!-- CTA Button -->
+                <div class="hidden md:block">
+                    <a href="#" class="za-btn bg-[#B68C5A] text-white py-4.5 px-7.5 inline-flex font-semibold">Free Consultation</a>
+                </div>
             </div>
         </div>
     </div>
     <!-- Header Are End -->
+
+    <!-- Demo Page Content (To test sticky scroll behavior) -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-8">
+        <div class="h-96 rounded-2xl bg-white border border-slate-200/60 p-8 shadow-sm">
+            <h1 class="text-2xl font-bold text-slate-800">Scroll down to test Sticky Header</h1>
+            <p class="text-slate-500 mt-2">The header smoothly sticks to the top with glassmorphism blur and shadow on
+                scroll.</p>
+        </div>
+        <div class="h-96 rounded-2xl bg-white border border-slate-200/60 p-8 shadow-sm"></div>
+        <div class="h-96 rounded-2xl bg-white border border-slate-200/60 p-8 shadow-sm"></div>
+    </main>
+
+    <!-- script -->
+    <script src=""></script>
 </body>
 
 </html>
